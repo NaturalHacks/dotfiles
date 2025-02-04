@@ -1,0 +1,3 @@
+# rel file ../../builds/global
+
+#copy that over with stow or something then symlink it

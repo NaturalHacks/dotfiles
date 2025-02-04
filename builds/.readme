@@ -1,0 +1,3 @@
+global has the universally applied files and or folders I want to sync before symlinking, the other folders are distro specific
+
+being inside any of the following folders is like being in the resultant builds "home" dir
