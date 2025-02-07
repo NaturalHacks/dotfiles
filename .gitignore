@@ -1,2 +1,5 @@
 #files starting with _
 _*
+priv*
+.git
+
