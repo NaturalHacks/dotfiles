@@ -1,10 +1,17 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-export PATH=/home/naturalhacks/.local/bin:$PATH
+export PATH=:/home/naturalhacks/.cargo/bin/:/home/naturalhacks/def/repos/projects/complete/bin:/home/naturalhacks/.local/bin:/home/naturalhacks/def/repos/packages/Odin:$PATH
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
+
+# Set the path for our dotfiles as they contain important stuff
+#
+export DFDIR="$HOME/def/dotfiles/"
+export DEF="$HOME/def/"
+
+# Source our env vars which will make refering to things faster
 
 # Set the directory we want to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -105,3 +112,11 @@ alias c='clear'
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
+source "$DFDIR/shell/.envvar.sh"
+source "$DFDIR/shell/.programcfg.sh"
+for f in ~/def/dotfiles/shell/aliases/.*; do source "$f"; done
+
+
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/naturalhacks/.lmstudio/bin"
