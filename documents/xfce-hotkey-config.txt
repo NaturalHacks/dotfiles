@@ -1,0 +1,4 @@
+go to keyboard in the shortcuts menu
+
+
+and xfwm4
