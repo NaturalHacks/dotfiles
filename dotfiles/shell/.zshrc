@@ -119,3 +119,28 @@ for f in ~/def/dotfiles/shell/aliases/.*; do source "$f"; done
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/home/naturalhacks/.lmstudio/bin"
+
+
+
+nv() {
+  local dir="${1:-.}"  # Default to current directory if no argument is given
+
+  # Handle relative paths correctly
+  case "$dir" in
+    .*) dir="$(realpath "$dir")" ;;  # Convert relative path to absolute
+    ~*) dir="$(eval echo "$dir")" ;; # Expand tilde (~) to home directory
+  esac
+
+  # Ensure the directory exists
+  [ -d "$dir" ] || { echo "Invalid directory: $dir"; return 1; }
+
+  # Run fzf inside the specified directory
+  local selected
+  selected=$(find "$dir" -type f | fzf -m --preview='bat --color=always {}')
+
+  # If Escape is pressed or no file is selected, exit without opening nvim
+  [ -z "$selected" ] && return
+
+  nvim $selected
+}
+

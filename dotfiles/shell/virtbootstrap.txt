@@ -1,0 +1,8 @@
+things needed to do
+
+sudo systemctl start libvirt
+sudo systemctl start xdg-dbus #?
+sudo mount /dev/sdb3 ~/virts/sdb3/
+
+d menu virt manager
+

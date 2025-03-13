@@ -27,3 +27,4 @@ alias BIT-501="cd ~/def/repos/BIT/certificate/BIT-501-Business-Concepts-and-Comm
 alias BIT-502="cd ~/def/repos/BIT/certificate/BIT-502-Fundamentals-Of-Programming/"
 alias BIT-503="cd ~/def/repos/BIT/certificate/BIT-503-Fundamentals-of-Information-Technology/"
 alias code-bit="cd /home/naturalhacks/def/repos/BIT/certificate/BIT-502-Fundamentals-Of-Programming/BIT-502-Code && nvim ."
+alias fund-bit="cd /home/naturalhacks/def/repos/BIT/certificate/BIT-503-Fundamentals-of-Information-Technology/ && ls -a"
